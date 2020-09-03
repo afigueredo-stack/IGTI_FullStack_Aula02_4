@@ -2,10 +2,12 @@ import express from 'express';
 import mongoose from 'mongoose';
 import { studentRouter } from './routes/studentRouter.js'
 
+require('dotenv').config();
+
 /** Conectar ao MondoDB pelo Mongoose **/
 (async () => {
   try {
-    await mongoose.connect("mongodb+srv://test:123@cluster0.dydqv.mongodb.net/grades", {
+    await mongoose.connect(`mongodb+srv://${process.env.USERDB}:${process.env.PWDDB}@cluster0.dydqv.mongodb.net/grades`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
