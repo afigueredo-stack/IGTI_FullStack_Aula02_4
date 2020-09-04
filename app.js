@@ -1,8 +1,11 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import { studentRouter } from './routes/studentRouter.js'
+
 /** Adicionar lib do dotenv */
-require('dotenv').config();
+//require('dotenv').config();
+import dotenv from 'dotenv'
+dotenv.config();
 
 /** Conectar ao MondoDB pelo Mongoose **/
 (async () => {
