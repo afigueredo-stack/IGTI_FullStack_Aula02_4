@@ -15,7 +15,7 @@ dotenv.config();
     });
     console.log("Conectado com sucesso no MongoDb");
   } catch (err) {
-    console.log(`${process.env.USERDB}:${process.env.PWDDB`});
+    console.log(`${process.env.USERDB}:${process.env.PWDDB}`);
     console.log("Erro ao conectar ao MongoDB" + err);
   }
 })();
@@ -25,4 +25,4 @@ const app = express();
 app.use(express.json());
 app.use(studentRouter);
 /** Configurando porta */
-app.listen(`${ process.env.PORT }`, () => console.log('API Iniciada'));
+app.listen(`${process.env.PORT}`, () => console.log('API Iniciada'));
