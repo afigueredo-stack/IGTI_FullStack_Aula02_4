@@ -15,6 +15,7 @@ dotenv.config();
     });
     console.log("Conectado com sucesso no MongoDb");
   } catch (err) {
+    console.log(`mongodb+srv://${process.env.USERDB}:${process.env.PWDDB}@cluster0.dydqv.mongodb.net/grades`);
     console.log("Erro ao conectar ao MongoDB" + err);
   }
 })();
